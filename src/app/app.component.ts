@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ServerService } from './server.service';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+declare var Fingerprint2: any;
 
 @Component({
     selector: 'app-root',
@@ -11,6 +12,15 @@ export class AppComponent {
     title = 'app';
 
     constructor(private serverService: ServerService) { }
+
+    ngAfterViewInit() {
+        Fingerprint2.get(function (components) {
+            var values = components.map(function (component) { return component.value })
+            var hash = Fingerprint2.x64hash128(values.join(''), 31)
+            console.log("");
+            console.log("Your fingerprint hash:", hash);
+        })
+    }
 
     loginBtn() {
         console.log("=== Login button pressed ===");
