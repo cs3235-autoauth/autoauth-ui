@@ -1,0 +1,4 @@
+[submodule "src/assets/autoauth-fingerprint"]
+	path = src/assets/autoauth-fingerprint
+	url = https://github.com/cs3235-autoauth/autoauth-fingerprint
+	branch = master
