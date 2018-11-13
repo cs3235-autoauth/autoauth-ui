@@ -3,6 +3,8 @@ import { ServerService } from './server.service';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 declare var Fingerprint2: any;
 
+declare var Fingerprint: any;
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -19,6 +21,8 @@ export class AppComponent {
             var hash = Fingerprint2.x64hash128(values.join(''), 31)
             console.log("");
             console.log("Your fingerprint hash:", hash);
+            
+            console.log(Fingerprint.get());
         })
     }
 
