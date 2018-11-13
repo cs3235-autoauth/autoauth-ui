@@ -1,16 +1,15 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ServerService } from '../server.service';
 declare var Fingerprint: any;
-declare var Fingerprint2: any;
 
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
     styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit, AfterViewInit {
+export class RegisterComponent implements OnInit {
     formType;
     public form: FormGroup;
     fingerprintArray: any[] = [];
@@ -27,27 +26,17 @@ export class RegisterComponent implements OnInit, AfterViewInit {
         });
     }
 
-    ngAfterViewInit() {
-        this.fingerprintArray = Fingerprint.get();
-        console.log(this.fingerprintArray);
-
-        // var _this = this;
-        // Fingerprint2.get(function (components) {
-        //     _this.fingerprintArray = components.map(function (component) { return component.value })
-        //     var hash = Fingerprint2.x64hash128(_this.fingerprintArray.join(''), 31)
-        //     console.log(_this.fingerprintArray);
-        //     console.log("");
-        //     console.log("Your fingerprint hash:", hash);
-        // })
-    }
-
-    registerBtn() {
+    async registerBtn() {
         if (this.form.controls.formInputEmail.status == "VALID") {
+            this.fingerprintArray = await Fingerprint.get();
+            console.log(this.fingerprintArray);
+
             let data = {
                 email: this.form.controls.formInputEmail.value,
                 fingerprint: this.fingerprintArray
             };
-            this.serverService.storeFingerprint(data)
+
+            await this.serverService.storeFingerprint(data)
                 .subscribe(
                     (response: any) => {
                         console.log(response.data);

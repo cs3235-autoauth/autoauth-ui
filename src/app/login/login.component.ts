@@ -1,16 +1,15 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ServerService } from '../server.service';
 declare var Fingerprint: any;
-declare var Fingerprint2: any;
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements AfterViewInit {
+export class LoginComponent implements OnInit {
     formType;
     public form: FormGroup;
     fingerprintArray: any[] = [];
@@ -26,18 +25,17 @@ export class LoginComponent implements AfterViewInit {
         });
     }
 
-    ngAfterViewInit() {
-        this.fingerprintArray = Fingerprint.get();
-        console.log(this.fingerprintArray);
-    }
-
-    loginBtn() {
+    async loginBtn() {
         if (this.form.controls.formInputEmail.status == "VALID") {
+            this.fingerprintArray = await Fingerprint.get();
+            console.log(this.fingerprintArray);
+
             let data = {
                 email: this.form.controls.formInputEmail.value,
                 fingerprint: this.fingerprintArray
             };
-            this.serverService.login(data)
+
+            await this.serverService.login(data)
                 .subscribe(
                     (response: any) => {
                         if (response.data.status == 200) {
