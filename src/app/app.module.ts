@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterSuccessComponent } from './register-success/register-success.component';
 import { LoginSuccessComponent } from './login-success/login-success.component';
 import { ServerService } from './server.service';
+import { LoginFailureComponent } from './login-failure/login-failure.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register-success', component: RegisterSuccessComponent },
     { path: 'login-success', component: LoginSuccessComponent },
+    { path: 'login-failure', component: LoginFailureComponent },
 ];
 
 @NgModule({
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
         RegisterComponent,
         LoginComponent,
         RegisterSuccessComponent,
-        LoginSuccessComponent
+        LoginSuccessComponent,
+        LoginFailureComponent
     ],
     imports: [
         BrowserModule,

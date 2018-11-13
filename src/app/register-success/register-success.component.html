@@ -1,3 +1,19 @@
-<p>
-  register-success works!
-</p>
+<div class="row wow animated fadein">
+    <div class="col-md-7 white-text text-center text-md-left">
+        <h1 class="display-4">Registered Successfully</h1>
+        <hr class="hr-light">
+        <!-- <p id="table"></p> -->
+
+        <table id="table">
+            <tr>
+                <th align="left">component</th>
+                <th align="left">value</th>
+            </tr>
+            <tr *ngFor="let item of fingerprintArray">
+                <td>{{item.userAgent}}</td>
+                <td>{{item.status}}</td>
+                <td>{{item.name}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -33,8 +33,8 @@
 
                 <mdb-card-body class="mx-4 mt-4">
                     <!--Sign Up Field-->
-                    <div class="md-form pb-1 pb-md-3">
-                        <input type="text" id="formInputEmail" class="form-control" mdbInputDirective>
+                    <div class="md-form pb-1 pb-md-3" [formGroup]="form">
+                        <input type="text" formControlName="formInputEmail" class="form-control" mdbInputDirective>
                         <label for="formInputEmail">Your email</label>
                     </div>
                     <!--Sign Up Field-->

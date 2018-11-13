@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
+import { throwError } from 'rxjs';
 
 @Injectable()
 export class ServerService {
@@ -9,15 +9,15 @@ export class ServerService {
 
     constructor(private http: Http) { }
 
-    login(email) {
-        return this.http.get(this.server_backend + "/backend/authenticate/" + email)
+    login(data) {
+        return this.http.post(this.server_backend + "/backend/authenticate/", data)
             .map((response: Response) => { return response.json(); })
-            .catch((error: Response) => { return Observable.throw('Unable to authenticate user: ' + error); });
+            .catch((error: Response) => { return throwError(error); })
     }
 
-    storeFingerprint(fingerprint) {
-        return this.http.post(this.server_backend + "/backend/register", fingerprint)
+    storeFingerprint(data) {
+        return this.http.post(this.server_backend + "/backend/register", data)
             .map((response: Response) => { return response.json(); })
-            .catch((error: Response) => { return Observable.throw('Unable to store fingerprint: ' + error); });
+            .catch((error: Response) => { return throwError(error); })
     }
 }
