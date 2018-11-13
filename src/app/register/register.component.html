@@ -1,40 +1,23 @@
-<div class="row wow animated fadeInUp">
+<div class="row animated fadeInUp">
     <div class="col"></div>
     <div class="col-5">
         <div class="form-gradient">
             <!--Form with header-->
             <mdb-card>
                 <!--Header-->
-                <div class="header pt-3 peach-gradient">
-
+                <div class="header pt-3 pb-3 peach-gradient">
                     <div class="row d-flex justify-content-center">
                         <h3 class="white-text mb-3 pt-3 font-weight-bold">Sign Up</h3>
                     </div>
-
-                    <!-- Social Media Icons-->
-                    <div class="row mt-2 mb-3 d-flex justify-content-center">
-                        <!--Facebook-->
-                        <a class="fa-lg p-2 m-2 fb-ic">
-                            <mdb-icon icon="facebook" class="white-text" size="lg"></mdb-icon>
-                        </a>
-                        <!--Twitter-->
-                        <a class="fa-lg p-2 m-2 tw-ic">
-                            <mdb-icon icon="twitter" class="white-text" size="lg"></mdb-icon>
-                        </a>
-                        <!--Google +-->
-                        <a class="fa-lg p-2 m-2 gplus-ic">
-                            <mdb-icon icon="google-plus" class="white-text" size="lg"></mdb-icon>
-                        </a>
-                    </div>
-                    <!-- Social Media Icons-->
-
                 </div>
                 <!--Header-->
 
                 <mdb-card-body class="mx-4 mt-4">
                     <!--Sign Up Field-->
-                    <div class="md-form pb-1 pb-md-3" [formGroup]="form">
-                        <input type="text" formControlName="formInputEmail" class="form-control" mdbInputDirective>
+                    <div class="md-form pb-3" [formGroup]="form">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input type="text" id="formInputEmail" formControlName="formInputEmail" class="form-control"
+                            mdbInputDirective>
                         <label for="formInputEmail">Your email</label>
                     </div>
                     <!--Sign Up Field-->
@@ -42,13 +25,11 @@
                     <!--Grid row-->
                     <div class="row d-flex align-items-center mb-4">
                         <!-- Sign Up Button -->
-                        <!--Grid column-->
                         <div class="col-md-12 mb-3">
                             <div class="text-center">
                                 <a class="btn btn-register text-white btn-block" (click)="registerBtn()">Sign Up</a>
                             </div>
                         </div>
-                        <!--Grid column-->
                         <!-- Sign Up Button -->
                     </div>
                     <!--Grid row-->

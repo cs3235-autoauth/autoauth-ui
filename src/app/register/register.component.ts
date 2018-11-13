@@ -17,17 +17,19 @@ export class RegisterComponent implements OnInit {
     constructor(
         private serverService: ServerService,
         private _fb: FormBuilder,
-        private router: Router) { }
-
-    ngOnInit() {
-        localStorage.clear();
+        private router: Router) {
         this.form = this._fb.group({
             formInputEmail: ['', [Validators.required, Validators.email]]
         });
     }
 
+    ngOnInit() {
+        localStorage.clear();
+    }
+
     async registerBtn() {
         if (this.form.controls.formInputEmail.status == "VALID") {
+
             this.fingerprintArray = await Fingerprint.get();
             console.log(this.fingerprintArray);
 
