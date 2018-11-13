@@ -38,8 +38,7 @@ export class LoginComponent implements OnInit {
             await this.serverService.login(data)
                 .subscribe(
                     (response: any) => {
-                        if (response.data.status == 200) {
-                            console.log(response.data);
+                        if (response.status == 200) {
                             this.router.navigate(['../login-success']);
                         } else {
                             this.router.navigate(['../login-failure']);

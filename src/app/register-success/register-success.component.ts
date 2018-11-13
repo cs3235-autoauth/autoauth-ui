@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-register-success',
@@ -8,16 +7,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RegisterSuccessComponent implements OnInit {
     fingerprintArray: any[] = [];
-
+    test: string;
     constructor() { }
 
     ngOnInit() {
-        let json = JSON.parse(localStorage.getItem("fingerprint"));
-        // console.log(fingerprintArray);
-
-        for (var x in json) {
-            this.fingerprintArray.push(json[x]);
-        }
+        this.fingerprintArray = JSON.parse(localStorage.getItem("fingerprint"));
+        console.log(this.fingerprintArray);
     }
-
 }
