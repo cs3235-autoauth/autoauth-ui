@@ -49,3 +49,11 @@
 .btn-login { background-image: linear-gradient(to right, #5695fc 0%, #66ccfb 51%, #5695fc 100%); }
 .btn-register { background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%); }
 .btn-register:active { background: #fda085; }
+
+.table-wrapper-scroll-y {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}

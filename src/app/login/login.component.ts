@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ServerService } from '../server.service';
@@ -9,7 +9,7 @@ declare var Fingerprint: any;
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
     public form: FormGroup;
     fingerprintArray: any[] = [];
 
@@ -22,9 +22,13 @@ export class LoginComponent {
         });
     }
 
+    ngOnInit() {
+        localStorage.clear();
+    }
+
     async loginBtn() {
         if (this.form.controls.formInputEmail.status == "VALID") {
-            
+
             this.fingerprintArray = await Fingerprint.get();
             console.log(this.fingerprintArray);
 

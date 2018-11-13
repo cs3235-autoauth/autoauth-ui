@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-register-success',
-    templateUrl: './register-success.component.html',
-    styleUrls: ['./register-success.component.scss']
+    templateUrl: '../shared/fingerprint-table.html'
 })
 export class RegisterSuccessComponent implements OnInit {
     fingerprintArray: any[] = [];
-    test: string;
+    pageTitle = "Registered";
+
     constructor() { }
 
     ngOnInit() {
