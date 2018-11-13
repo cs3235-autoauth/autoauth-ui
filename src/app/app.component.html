@@ -1,54 +1,55 @@
 <header class="h-100">
-	<!-- Navbar -->
-	<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top" [containerInside]="true">
-		<mdb-navbar-brand>
-			<a class="logo navbar-brand" href="#">
-				<strong>AutoAuth™</strong>
-			</a>
-		</mdb-navbar-brand>
-		<links>
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active waves-light" mdbWavesEffect>
-					<a class="nav-link">Home
-						<span class="sr-only">(current)</span>
-					</a>
-				</li>
-				<li class="nav-item waves-light" mdbWavesEffect>
-					<a class="nav-link">Link</a>
-				</li>
-				<li class="nav-item waves-light" mdbWavesEffect>
-					<a class="nav-link">Profile</a>
-				</li>
-			</ul>
-		</links>
-	</mdb-navbar>
-	<!-- Navbar -->
+    <!-- Navbar -->
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top" [containerInside]="true">
+        <mdb-navbar-brand>
+            <a class="logo navbar-brand" href="#">
+                <strong>AutoAuth™</strong>
+            </a>
+        </mdb-navbar-brand>
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active waves-light" routerLinkActive="active" mdbWavesEffect>
+                    <a class="nav-link" routerLink="login">Home
+                    </a>
+                </li>
+                <li class="nav-item waves-light" routerLinkActive="active" mdbWavesEffect>
+                    <a class="nav-link" routerLink="register">Register</a>
+                </li>
+                <li class="nav-item waves-light" routerLinkActive="active" mdbWavesEffect>
+                    <a class="nav-link">Profile</a>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+    <!-- Navbar -->
 
-	<!-- Main -->
-	<div class="view">
-		<!--Carousel Wrapper-->
-		<mdb-carousel [isControls]="false">
-			<!--First slide-->
-			<mdb-carousel-item>
-				<!--Mask color-->
-				<div class="view">
-					<!--Video source-->
-					<video class="video-fluid" autoplay loop muted playsinline>
-						<source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
-					</video>
-					<div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
-				</div>
+    <!-- Main -->
+    <div class="view">
+        <!--Carousel Wrapper-->
+        <mdb-carousel [isControls]="false">
+            <!--First slide-->
+            <mdb-carousel-item>
+                <!--Mask color-->
+                <div class="view">
+                    <!--Video source-->
+                    <video class="video-fluid" autoplay loop muted playsinline>
+                        <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+                    </video>
+                    <div class="mask rgba-indigo-light waves-light" mdbWavesEffect></div>
+                </div>
 
-				<!--Context-->
-				<div class="full-bg-img flex-center mask rgba-indigo-light white-text">
-					<router-outlet></router-outlet>
-				</div>
-				<!--Context-->
+                <!--Context-->
+                <div class="mask rgba-indigo-light d-flex justify-content-center align-items-center">
+                    <div class="container">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+                <!--Context-->
 
-			</mdb-carousel-item>
-		</mdb-carousel>
-		<!--Carousel Wrapper-->
-	</div>
-	<!-- /.Main -->
+            </mdb-carousel-item>
+        </mdb-carousel>
+        <!--Carousel Wrapper-->
+    </div>
+    <!-- /.Main -->
 </header>
 <!--Main Navigation-->

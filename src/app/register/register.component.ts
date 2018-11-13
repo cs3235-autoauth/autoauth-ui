@@ -1,15 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { ServerService } from '../server.service';
+declare var Fingerprint2: any;
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements AfterViewInit {
 
-  constructor() { }
+    constructor(private serverService: ServerService) { }
 
-  ngOnInit() {
-  }
+    ngAfterViewInit() {
+        Fingerprint2.get(function (components) {
+            var values = components.map(function (component) { return component.value })
+            var hash = Fingerprint2.x64hash128(values.join(''), 31)
+            console.log("");
+            console.log(values);
+            console.log("");
+            console.log("Your fingerprint hash:", hash);
+        })
+    }
+
+    loginBtn() {
+        console.log("=== Login button pressed ===");
+
+        let data = {
+            fingerprint: "1234"
+        };
+        this.serverService.storeFingerprint(data)
+            .subscribe(
+                (response: any) => {
+                    console.log(response.data);
+                },
+                (error) => console.log(error)
+            );
+    }
 
 }
