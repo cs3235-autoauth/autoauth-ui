@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ServerService } from './server.service';
 
+declare var Fingerprint: any;
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
