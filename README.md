@@ -6,7 +6,7 @@ This project was built with [Angular CLI](https://github.com/angular/angular-cli
 
 Run `ng serve autoauth-ui` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-![Sample Screenshot](sample.png)
+![Sample Screenshot](sample_ss.png)
 
 ## Code scaffolding
 
