@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginSuccessComponent implements OnInit {
     fingerprintArray: any[] = [];
-    pageTitle = "Login";
+    pageTitle = "Logged in";
     constructor() { }
 
     ngOnInit() {
