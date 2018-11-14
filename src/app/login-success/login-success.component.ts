@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-login-success',
-    templateUrl: '../shared/fingerprint-table.html'
+    templateUrl: '../shared/fingerprint-table-login.html'
 })
 export class LoginSuccessComponent implements OnInit {
     fingerprintArray: any[] = [];
