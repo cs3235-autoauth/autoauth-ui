@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ServerService } from '../server.service';
+import * as $ from "jquery";
 declare var Fingerprint: any;
 
 @Component({
@@ -33,8 +34,10 @@ export class RegisterComponent implements OnInit {
             this.fingerprintArray = await Fingerprint.get();
             console.log(this.fingerprintArray);
 
+            let securityLevel = ($("input:radio[name ='securityLevel']:checked") as any).val();
+
             let data = {
-                level: 3,
+                level: securityLevel,
                 email: this.form.controls.formInputEmail.value,
                 fingerprint: this.fingerprintArray
             };

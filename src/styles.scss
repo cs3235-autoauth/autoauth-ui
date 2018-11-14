@@ -57,3 +57,14 @@
     overflow-y: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+
+.custom-control,
+.custom-control-radio,
+.custom-control-label,
+.custom-control-input {
+    cursor: pointer;
+}
+
+canvas {
+    display: none;
+}

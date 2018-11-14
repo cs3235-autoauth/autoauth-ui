@@ -14,13 +14,32 @@
 
                 <mdb-card-body class="mx-4 mt-4">
                     <!--Sign Up Field-->
-                    <div class="md-form pb-3" [formGroup]="form">
+                    <div class="md-form" [formGroup]="form">
                         <i class="fa fa-envelope prefix"></i>
                         <input type="text" id="formInputEmail" formControlName="formInputEmail" class="form-control"
                             mdbInputDirective>
                         <label for="formInputEmail">Your email</label>
                     </div>
                     <!--Sign Up Field-->
+
+                    <!-- Security Level -->
+                    <div class="pb-4">
+                        <div class="mb-2">Security Level:</div>
+                        <div class="custom-control custom-radio ml-4">
+                            <input type="radio" class="custom-control-input" id="formInputRadioHigh" value="3" name="securityLevel">
+                            <label class="custom-control-label" for="formInputRadioHigh">High</label>
+                        </div>
+                        <div class="custom-control custom-radio ml-4">
+                            <input type="radio" class="custom-control-input" id="formInputRadioMed" value="2" name="securityLevel">
+                            <label class="custom-control-label" for="formInputRadioMed">Medium</label>
+                        </div>
+                        <div class="custom-control custom-radio ml-4">
+                            <input type="radio" class="custom-control-input" id="formInputRadioLow" value="1" name="securityLevel"
+                                checked>
+                            <label class="custom-control-label" for="formInputRadioLow">Low</label>
+                        </div>
+                    </div>
+                    <!--Security Level-->
 
                     <!--Grid row-->
                     <div class="row d-flex align-items-center mb-4">
