@@ -34,6 +34,7 @@ export class RegisterComponent implements OnInit {
             console.log(this.fingerprintArray);
 
             let data = {
+                level: 3,
                 email: this.form.controls.formInputEmail.value,
                 fingerprint: this.fingerprintArray
             };
