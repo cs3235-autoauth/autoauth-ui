@@ -1,242 +1,251 @@
 <div class="row animated fadein">
-        <div class="col-md-12 white-text text-center text-md-left">
-            <h1 class="display-4">{{pageTitle}} Successfully</h1>
-            <hr class="hr-light">
-    
-            <div class="table-wrapper-scroll-y">
-                <table class="table table-bordered table-striped table-hover">
-                    <thead class="table-active">
-                        <tr>
-                            <th colspan=3>Your fingerprint</th>
-                            <th colspan="3">Stored fingerprint</th>
-                        <tr>
-                            <th>#</th>
-                            <th>Key</th>
-                            <th>Value</th>
-                            <th>#</th>
-                            <th>Key</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Audio</td>
-                            <td>{{fingerprintArray.audio}}</td>
-                            <th scope="row">1</th>
-                            <td>Audio</td>
-                            <td>{{fingerprintStoredArray.audio}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Fonts</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintArray.fonts}}</td>
-                            <th scope="row">2</th>
-                            <td>Fonts</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintStoredArray.fonts}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>WebGL</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintArray.webgl}}</td>
-                            <th scope="row">3</th>
-                            <td>WebGL</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintStoredArray.webgl}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Canvas</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintArray.canvas}}</td>
-                            <th scope="row">4</th>
-                            <td>Canvas</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintStoredArray.canvas}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Ad-Blocker</td>
-                            <td>{{fingerprintArray.adBlock}}</td>
-                            <th scope="row">5</th>
-                            <td>Ad-Blocker</td>
-                            <td>{{fingerprintStoredArray.adBlock}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Plugins</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintArray.plugins}}</td>
-                            <th scope="row">6</th>
-                            <td>Plugins</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintStoredArray.plugins}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">7</th>
-                            <td>CPU Class</td>
-                            <td>{{fingerprintArray.cpuClass}}</td>
-                            <th scope="row">7</th>
-                            <td>CPU Class</td>
-                            <td>{{fingerprintStoredArray.cpuClass}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">8</th>
-                            <td>Language</td>
-                            <td>{{fingerprintArray.language}}</td>
-                            <th scope="row">8</th>
-                            <td>Language</td>
-                            <td>{{fingerprintStoredArray.language}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">9</th>
-                            <td>Platform</td>
-                            <td>{{fingerprintArray.platform}}</td>
-                            <th scope="row">9</th>
-                            <td>Platform</td>
-                            <td>{{fingerprintStoredArray.platform}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">10</th>
-                            <td>Timezone</td>
-                            <td>{{fingerprintArray.timezone}}</td>
-                            <th scope="row">10</th>
-                            <td>Timezone</td>
-                            <td>{{fingerprintStoredArray.timezone}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">11</th>
-                            <td>Indexed DB</td>
-                            <td>{{fingerprintArray.indexedDB}}</td>
-                            <th scope="row">11</th>
-                            <td>Indexed DB</td>
-                            <td>{{fingerprintStoredArray.indexedDB}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">12</th>
-                            <td>User Agent</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintArray.userAgent}}</td>
-                            <th scope="row">12</th>
-                            <td>User Agent</td>
-                            <td style="word-wrap: break-word;word-break: break-all;">{{fingerprintStoredArray.userAgent}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">13</th>
-                            <td>Color Depth</td>
-                            <td>{{fingerprintArray.colorDepth}}</td>
-                            <th scope="row">13</th>
-                            <td>Color Depth</td>
-                            <td>{{fingerprintStoredArray.colorDepth}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">14</th>
-                            <td>Do Not Track</td>
-                            <td>{{fingerprintArray.doNotTrack}}</td>
-                            <th scope="row">14</th>
-                            <td>Do Not Track</td>
-                            <td>{{fingerprintStoredArray.doNotTrack}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">15</th>
-                            <td>Pixel Ratio</td>
-                            <td>{{fingerprintArray.pixelRatio}}</td>
-                            <th scope="row">15</th>
-                            <td>Pixel Ratio</td>
-                            <td>{{fingerprintStoredArray.pixelRatio}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">16</th>
-                            <td>Add Behavior</td>
-                            <td>{{fingerprintArray.addBehavior}}</td>
-                            <th scope="row">16</th>
-                            <td>Add Behavior</td>
-                            <td>{{fingerprintStoredArray.addBehavior}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">17</th>
-                            <td>Device Memory</td>
-                            <td>{{fingerprintArray.deviceMemory}}</td>
-                            <th scope="row">17</th>
-                            <td>Device Memory</td>
-                            <td>{{fingerprintStoredArray.deviceMemory}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">18</th>
-                            <td>Local Storage</td>
-                            <td>{{fingerprintArray.localStorage}}</td>
-                            <th scope="row">18</th>
-                            <td>Local Storage</td>
-                            <td>{{fingerprintStoredArray.localStorage}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">19</th>
-                            <td>Open Database</td>
-                            <td>{{fingerprintArray.openDatabase}}</td>
-                            <th scope="row">19</th>
-                            <td>Open Database</td>
-                            <td>{{fingerprintStoredArray.openDatabase}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">20</th>
-                            <td>Touch Support</td>
-                            <td>{{fingerprintArray.touchSupport}}</td>
-                            <th scope="row">20</th>
-                            <td>Touch Support</td>
-                            <td>{{fingerprintStoredArray.touchSupport}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">21</th>
-                            <td>Session Storage</td>
-                            <td>{{fingerprintArray.sessionStorage}}</td>
-                            <th scope="row">21</th>
-                            <td>Session Storage</td>
-                            <td>{{fingerprintStoredArray.sessionStorage}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">22</th>
-                            <td>Timezone Offset/td>
-                            <td>{{fingerprintArray.timezoneOffset}}</td>
-                            <th scope="row">22</th>
-                            <td>Timezone Offset/td>
-                            <td>{{fingerprintStoredArray.timezoneOffset}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">23</th>
-                            <td>Enumerate Device</td>
-                            <td>{{fingerprintArray.enumerateDevice}}</td>
-                            <th scope="row">23</th>
-                            <td>Enumerate Device</td>
-                            <td>{{fingerprintStoredArray.enumerateDevice}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">24</th>
-                            <td>Screen Resolution</td>
-                            <td>{{fingerprintArray.screenResolution}}</td>
-                            <th scope="row">24</th>
-                            <td>Screen Resolution</td>
-                            <td>{{fingerprintStoredArray.screenResolution}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">25</th>
-                            <td>Hardware Concurrency</td>
-                            <td>{{fingerprintArray.hardwareConcurrency}}</td>
-                            <th scope="row">25</th>
-                            <td>Hardware Concurrency</td>
-                            <td>{{fingerprintStoredArray.hardwareConcurrency}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">26</th>
-                            <td>WebGL Vendor and Renderer</td>
-                            <td>{{fingerprintArray.webglVendorAndRenderer}}</td>
-                            <th scope="row">26</th>
-                            <td>WebGL Vendor and Renderer</td>
-                            <td>{{fingerprintStoredArray.webglVendorAndRenderer}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">27</th>
-                            <td>Available Screen Resolution</td>
-                            <td>{{fingerprintArray.availableScreenResolution}}</td>
-                            <th scope="row">27</th>
-                            <td>Available Screen Resolution</td>
-                            <td>{{fingerprintStoredArray.availableScreenResolution}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="col-md-12 white-text text-center">
+        <h1 class="display-4">{{pageTitle}} Successfully</h1>
+        <hr class="hr-light">
+
+        <div class="table-wrapper-scroll-y">
+            <table class="table table-bordered table-striped table-hover">
+                <colgroup>
+                    <col width="1%">
+                    <col width="1%">
+                    <col width="5%">
+                    <col width="1%">
+                    <col width="1%">
+                    <col width="5%">
+                </colgroup>
+                <thead class="table-active">
+                    <tr>
+                        <th colspan=3>Your fingerprint</th>
+                        <th colspan="3">Stored fingerprint</th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Key</th>
+                        <th>Value</th>
+                        <th>#</th>
+                        <th>Key</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Audio</td>
+                        <td>{{fingerprintArray.audio}}</td>
+                        <th scope="row">1</th>
+                        <td>Audio</td>
+                        <td>{{fingerprintStoredArray.audio}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Fonts</td>
+                        <td class="table-word-wrap">{{fingerprintArray.fonts}}</td>
+                        <th scope="row">2</th>
+                        <td>Fonts</td>
+                        <td class="table-word-wrap">{{fingerprintStoredArray.fonts}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>WebGL</td>
+                        <td class="table-word-wrap">{{fingerprintArray.webgl}}</td>
+                        <th scope="row">3</th>
+                        <td>WebGL</td>
+                        <td class="table-word-wrap">{{fingerprintStoredArray.webgl}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Canvas</td>
+                        <td class="table-word-wrap">{{fingerprintArray.canvas}}</td>
+                        <th scope="row">4</th>
+                        <td>Canvas</td>
+                        <td class="table-word-wrap">{{fingerprintStoredArray.canvas}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Ad-Blocker</td>
+                        <td>{{fingerprintArray.adBlock}}</td>
+                        <th scope="row">5</th>
+                        <td>Ad-Blocker</td>
+                        <td>{{fingerprintStoredArray.adBlock}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Plugins</td>
+                        <td class="table-word-wrap">{{fingerprintArray.plugins}}</td>
+                        <th scope="row">6</th>
+                        <td>Plugins</td>
+                        <td class="table-word-wrap">{{fingerprintStoredArray.plugins}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>CPU Class</td>
+                        <td>{{fingerprintArray.cpuClass}}</td>
+                        <th scope="row">7</th>
+                        <td>CPU Class</td>
+                        <td>{{fingerprintStoredArray.cpuClass}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>Language</td>
+                        <td>{{fingerprintArray.language}}</td>
+                        <th scope="row">8</th>
+                        <td>Language</td>
+                        <td>{{fingerprintStoredArray.language}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>Platform</td>
+                        <td>{{fingerprintArray.platform}}</td>
+                        <th scope="row">9</th>
+                        <td>Platform</td>
+                        <td>{{fingerprintStoredArray.platform}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>Timezone</td>
+                        <td>{{fingerprintArray.timezone}}</td>
+                        <th scope="row">10</th>
+                        <td>Timezone</td>
+                        <td>{{fingerprintStoredArray.timezone}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11</th>
+                        <td>Indexed DB</td>
+                        <td>{{fingerprintArray.indexedDB}}</td>
+                        <th scope="row">11</th>
+                        <td>Indexed DB</td>
+                        <td>{{fingerprintStoredArray.indexedDB}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">12</th>
+                        <td>User Agent</td>
+                        <td class="table-word-wrap">{{fingerprintArray.userAgent}}</td>
+                        <th scope="row">12</th>
+                        <td>User Agent</td>
+                        <td class="table-word-wrap">{{fingerprintStoredArray.userAgent}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>Color Depth</td>
+                        <td>{{fingerprintArray.colorDepth}}</td>
+                        <th scope="row">13</th>
+                        <td>Color Depth</td>
+                        <td>{{fingerprintStoredArray.colorDepth}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">14</th>
+                        <td>Do Not Track</td>
+                        <td>{{fingerprintArray.doNotTrack}}</td>
+                        <th scope="row">14</th>
+                        <td>Do Not Track</td>
+                        <td>{{fingerprintStoredArray.doNotTrack}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">15</th>
+                        <td>Pixel Ratio</td>
+                        <td>{{fingerprintArray.pixelRatio}}</td>
+                        <th scope="row">15</th>
+                        <td>Pixel Ratio</td>
+                        <td>{{fingerprintStoredArray.pixelRatio}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">16</th>
+                        <td>Add Behavior</td>
+                        <td>{{fingerprintArray.addBehavior}}</td>
+                        <th scope="row">16</th>
+                        <td>Add Behavior</td>
+                        <td>{{fingerprintStoredArray.addBehavior}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>Device Memory</td>
+                        <td>{{fingerprintArray.deviceMemory}}</td>
+                        <th scope="row">17</th>
+                        <td>Device Memory</td>
+                        <td>{{fingerprintStoredArray.deviceMemory}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">18</th>
+                        <td>Local Storage</td>
+                        <td>{{fingerprintArray.localStorage}}</td>
+                        <th scope="row">18</th>
+                        <td>Local Storage</td>
+                        <td>{{fingerprintStoredArray.localStorage}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">19</th>
+                        <td>Open Database</td>
+                        <td>{{fingerprintArray.openDatabase}}</td>
+                        <th scope="row">19</th>
+                        <td>Open Database</td>
+                        <td>{{fingerprintStoredArray.openDatabase}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">20</th>
+                        <td>Touch Support</td>
+                        <td>{{fingerprintArray.touchSupport}}</td>
+                        <th scope="row">20</th>
+                        <td>Touch Support</td>
+                        <td>{{fingerprintStoredArray.touchSupport}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">21</th>
+                        <td>Session Storage</td>
+                        <td>{{fingerprintArray.sessionStorage}}</td>
+                        <th scope="row">21</th>
+                        <td>Session Storage</td>
+                        <td>{{fingerprintStoredArray.sessionStorage}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">22</th>
+                        <td>Timezone Offset/td>
+                        <td>{{fingerprintArray.timezoneOffset}}</td>
+                        <th scope="row">22</th>
+                        <td>Timezone Offset/td>
+                        <td>{{fingerprintStoredArray.timezoneOffset}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">23</th>
+                        <td>Enumerate Device</td>
+                        <td>{{fingerprintArray.enumerateDevice}}</td>
+                        <th scope="row">23</th>
+                        <td>Enumerate Device</td>
+                        <td>{{fingerprintStoredArray.enumerateDevice}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">24</th>
+                        <td>Screen Resolution</td>
+                        <td>{{fingerprintArray.screenResolution}}</td>
+                        <th scope="row">24</th>
+                        <td>Screen Resolution</td>
+                        <td>{{fingerprintStoredArray.screenResolution}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">25</th>
+                        <td>Hardware Concurrency</td>
+                        <td>{{fingerprintArray.hardwareConcurrency}}</td>
+                        <th scope="row">25</th>
+                        <td>Hardware Concurrency</td>
+                        <td>{{fingerprintStoredArray.hardwareConcurrency}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">26</th>
+                        <td>WebGL Vendor and Renderer</td>
+                        <td>{{fingerprintArray.webglVendorAndRenderer}}</td>
+                        <th scope="row">26</th>
+                        <td>WebGL Vendor and Renderer</td>
+                        <td>{{fingerprintStoredArray.webglVendorAndRenderer}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">27</th>
+                        <td>Available Screen Resolution</td>
+                        <td>{{fingerprintArray.availableScreenResolution}}</td>
+                        <th scope="row">27</th>
+                        <td>Available Screen Resolution</td>
+                        <td>{{fingerprintStoredArray.availableScreenResolution}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+</div>
