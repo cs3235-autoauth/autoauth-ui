@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ServerService } from '../server.service';
 declare var Fingerprint: any;
 
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
     constructor(
         private serverService: ServerService,
         private fb: FormBuilder,
-        private router: Router) {
+        private router: Router,
+        private spinner: NgxSpinnerService) {
         this.form = this.fb.group({
             formInputEmail: ['', [Validators.required, Validators.email]]
         });
@@ -29,6 +31,10 @@ export class LoginComponent implements OnInit {
     async loginBtn() {
         if (this.form.controls.formInputEmail.status == "VALID") {
 
+            // Display loading indicator
+            this.spinner.show();
+
+            // Construct data
             this.fingerprintArray = await Fingerprint.get();
             console.log(this.fingerprintArray);
 

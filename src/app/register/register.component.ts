@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ServerService } from '../server.service';
 import * as $ from "jquery";
 declare var Fingerprint: any;
@@ -18,7 +19,8 @@ export class RegisterComponent implements OnInit {
     constructor(
         private serverService: ServerService,
         private _fb: FormBuilder,
-        private router: Router) {
+        private router: Router,
+        private spinner: NgxSpinnerService) {
         this.form = this._fb.group({
             formInputEmail: ['', [Validators.required, Validators.email]]
         });
@@ -31,6 +33,10 @@ export class RegisterComponent implements OnInit {
     async registerBtn() {
         if (this.form.controls.formInputEmail.status == "VALID") {
 
+            // Display loading indicator
+            this.spinner.show();
+
+            // Construct data
             this.fingerprintArray = await Fingerprint.get();
             console.log(this.fingerprintArray);
 

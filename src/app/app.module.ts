@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
         BrowserAnimationsModule,
         HttpModule,
         MDBBootstrapModule.forRoot(),
+        NgxSpinnerModule,
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forRoot(appRoutes)
