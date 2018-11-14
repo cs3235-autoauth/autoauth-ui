@@ -48,7 +48,9 @@ export class LoginComponent implements OnInit {
                     (response: any) => {
                         console.log(response);
                         if (response.status == 200) {
+                            let fingerprint_stored = response.data.stored_fp;
                             localStorage.setItem('fingerprint', JSON.stringify(this.fingerprintArray));
+                            localStorage.setItem('fingerprint_stored', JSON.stringify(fingerprint_stored));
                             this.router.navigate(['../login-success']);
                         } else {
                             this.router.navigate(['../login-failure']);
